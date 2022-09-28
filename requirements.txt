@@ -1,2 +1,4 @@
-uwsgi
+flask
 pre-commit
+requests
+uwsgi

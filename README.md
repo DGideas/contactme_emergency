@@ -19,3 +19,8 @@ Recommand configure:
 ```
 alias python3="PYTHONPATH=. python3"
 ```
+
+# In development environment
+```
+python3 src/wsgi.py
+```
