@@ -9,7 +9,7 @@ Restart=on-failure
 RestartSec=5s
 WorkingDirectory=/opt/contactme/src
 Environment=PYTHONPATH=/opt/contactme/src
-ExecStart=/bin/bash -c "source ../venv/bin/activate && uwsgi -s /opt/contactme/contactme.sock -w wordgene.ideaspark.app:app --virtualenv /opt/contactme/venv/ --enable-threads -p 2"
+ExecStart=/bin/bash -c "source ../venv/bin/activate && uwsgi -s /opt/contactme/contactme.sock -w src.web.app:app --virtualenv /opt/contactme/venv/ --enable-threads -p 2"
 
 [Install]
 WantedBy=multi-user.target

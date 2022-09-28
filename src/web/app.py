@@ -6,7 +6,7 @@ from typing import Dict
 
 from flask import Flask, render_template, request
 
-from pagerduty import PagerDutyAlert, PagerDutyUrgency
+from src.pagerduty import PagerDutyAlert, PagerDutyUrgency
 
 logger = logging.getLogger("contactme.app")
 logging.basicConfig()
