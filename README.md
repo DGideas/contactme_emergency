@@ -5,11 +5,11 @@ A single-button page with "Contact Me" function, using PagerDuty to alerm
 
 1. Create virtual environment
 ```
-python3 -m venv wordgene
+python3 -m venv venv
 ```
 2. And, execute the following command every time:
 ```
-source wordgene/bin/activate
+source venv/bin/activate
 ```
 3. Install python dependences
 ```
