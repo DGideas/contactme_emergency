@@ -2,7 +2,6 @@ import re
 from enum import Enum
 
 import requests
-
 from local_settings import *
 
 

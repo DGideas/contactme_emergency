@@ -1,4 +1,4 @@
-WordGene 支持使用 CI & CD 自动化流程进行部署，要进行自动化部署流程，首先需要构建具有适当权限(如`chmod u+wrx g+wrxs -R contactme && setfacl -R -d -m u::rwx -m g::rwx contactme`)的 `/opt/contactme` 目录，为 www-data 用户添加 CI&CD 流程的用户组权限。目录内提供如下文件:
+ContactMe @ emergency 支持使用 CI & CD 自动化流程进行部署，要进行自动化部署流程，首先需要构建具有适当权限(如`chmod u+wrx g+wrxs -R contactme && setfacl -R -d -m u::rwx -m g::rwx contactme`)的 `/opt/contactme` 目录，为 www-data 用户添加 CI&CD 流程的用户组权限。目录内提供如下文件:
 
 /opt/contactme
   - venv/ - python3 -m venv 生成的生产环境 env
@@ -19,10 +19,10 @@ server {
         listen 443 ssl http2;
         ssl_certificate /etc/nginx/cloudflare/public.pem;
         ssl_certificate_key /etc/nginx/cloudflare/private.pem;
-        ssl_client_certificate /etc/nginx/cloudflare/cloudflare.pem;
+        ssl_client_certificate /etc/nginx/cloudflare/cloudflare.crt;
         ssl_verify_client on;
 
-        location /api {
+        location / {
                 include uwsgi_params;
                 uwsgi_pass unix:/opt/contactme/contactme.sock;
         }

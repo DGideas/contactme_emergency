@@ -3,6 +3,10 @@ A single-button page with "Contact Me" function, using PagerDuty to alerm
 
 # First-time configure
 
+0. Install required packages
+```
+sudo apt install python3-venv python3-pip python3-dev
+```
 1. Create virtual environment
 ```
 python3 -m venv venv
@@ -24,3 +28,6 @@ alias python3="PYTHONPATH=. python3"
 ```
 python3 src/wsgi.py
 ```
+
+# In production environment
+Please refer to `deployment/howto.md`
