@@ -11,7 +11,7 @@ ContactMe @ emergency 支持使用 CI & CD 自动化流程进行部署，要进�
 ALL ALL=NOPASSWD: /usr/bin/systemctl
 
 同时需要在 Nginx 中进行如下配置:
-
+```
 server {
         server_name example.com;
         index index.html index.htm;
@@ -36,5 +36,5 @@ server {
         listen 80;
         return 404;
 }
-
+```
 首次部署成功后，记得运行一下 scripts/ 里边的 init 打头的脚本，用于初始化数据。
