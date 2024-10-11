@@ -30,4 +30,4 @@ python3 src/wsgi.py
 ```
 
 # In production environment
-Please refer to `deployment/howto.md`
+Please refer to `deployment/README.md`
